@@ -36,10 +36,12 @@ output:
 
 A plot is basically a stack of layers consisting of:
 
->- data
->- aesthetic  --> aes()
->- geometry   --> geom_
->- theme      --> theme()
+1. data
+2. aesthetic  --> aes()  --> x-axis, y-axis, colour, size, shape, etc
+3. geometry   --> geom_* --> point, line, bar, histogram, boxplot, etc. 
+4. theme (*optional*)      --> theme()
+5. facets (*optional*)  --> columns, rows
+6. coordinates (*optional*) --> cartesian, fixed, polar, limits. 
 
 ## Take a look at this plot
 
@@ -170,12 +172,9 @@ Your output should look like this:
 
 ## Types of Geoms (geom_*) 
 
-1. geom_point() --> for scatter plot
-2. geom_bar()   --> for bar chart
-3. geom_area()  --> for area chart
-4. geom_line()  --> for line chart
+![](ggplot_geom.jpg)
 
-There are many other types of geoms. You can explore it yourself on [ggplot cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf).  
+You can also explore it yourself on [ggplot cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf).  
 
 
 ## Playing with geoms {.columns-2 .smaller}
@@ -364,6 +363,9 @@ iris %>%
   geom_jitter() +
   facet_grid(. ~ Species)
 ```
+
+## Playing with Coordinates
+
 
 ## Questions?
 
